@@ -1,28 +1,63 @@
-import React from "react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Layout from "../../components/layout";
-import ReactMarkdown from "react-markdown/with-html";
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
+import Image from "next/image";
 
-export default function Post({ content, frontmatter }) {
+import { Layout, SEO, Bio } from "@components/common";
+import { getPostBySlug, getPostsSlugs } from "@utils/posts";
+
+export default function Post({ post, frontmatter, nextPost, previousPost }) {
   return (
     <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || post.excerpt}
+      />
+
       <article>
-        <ReactMarkdown escapeHtml={false} source={content} />
+        <header className="mb-8">
+          <h1 className="mb-2 text-6xl font-black leading-none font-display">
+            {frontmatter.title}
+          </h1>
+          <p className="text-sm">{frontmatter.date}</p>
+        </header>
+        <ReactMarkdown
+          className="mb-4 prose lg:prose-lg dark:prose-dark"
+          escapeHtml={false}
+          source={post.content}
+          renderers={{ code: CodeBlock, image: MarkdownImage }}
+        />
+        <hr className="mt-4" />
+        <footer>
+          <Bio className="mt-8 mb-16" />
+        </footer>
       </article>
+
+      <nav className="flex flex-wrap justify-between mb-10">
+        {previousPost ? (
+          <Link href={"/posts/[slug]"} as={`/posts/${previousPost.slug}`}>
+            <a className="text-lg font-bold">
+              ← {previousPost.frontmatter.title}
+            </a>
+          </Link>
+        ) : (
+          <div />
+        )}
+        {nextPost ? (
+          <Link href={"/posts/[slug]"} as={`/posts/${nextPost.slug}`}>
+            <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
+          </Link>
+        ) : (
+          <div />
+        )}
+      </nav>
     </Layout>
   );
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("content/posts");
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace(".md", ""),
-    },
-  }));
+  const paths = getPostsSlugs();
 
   return {
     paths,
@@ -31,25 +66,34 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-   const markdownWithMetadata = fs
-    .readFileSync(path.join("content/posts", slug + ".md"))
-    .toString();
+  const postData = getPostBySlug(slug);
 
-  const { data, content } = matter(markdownWithMetadata);
+  if (!postData.previousPost) {
+    postData.previousPost = null;
+  }
 
-  // Convert post date to format: Month day, Year
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const formattedDate = data.date.toLocaleDateString("en-US", options);
+  if (!postData.nextPost) {
+    postData.nextPost = null;
+  }
 
-  const frontmatter = {
-    ...data,
-    date: formattedDate,
-  };
-
-  return {
-    props: {
-      content: `# ${data.title}\n${content}`,
-      frontmatter,
-    },
-  };
+  return { props: postData };
 }
+
+const CodeBlock = ({ language, value }) => {
+  return (
+    <SyntaxHighlighter style={style} language={language}>
+      {value}
+    </SyntaxHighlighter>
+  );
+};
+
+const MarkdownImage = ({ alt, src }) => {
+  return (
+    <Image
+      alt={alt}
+      src={require(`../../content/assets/${src}`)}
+      placeholder="blur"
+      className="w-full"
+    />
+  );
+};
