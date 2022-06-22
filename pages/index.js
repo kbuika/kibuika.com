@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Layout, Bio, SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
+import { generateRssPostsFeed } from "@utils/rss";
 
 export default function Home({ posts }) {
   return (
@@ -30,6 +31,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
+  generateRssPostsFeed()
   const posts = getSortedPosts();
 
   return {
