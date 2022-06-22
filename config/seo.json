@@ -1,0 +1,16 @@
+{
+  "siteMetadata": {
+    "title": "Next.js Starter Blog",
+    "author": {
+      "name": "Steve Kibuika",
+      "summary": "My attempt at understanding code.",
+      "link": "https://kibuika.com"
+    },
+    "description": "Personal blog for Steve Kibuika",
+    "siteUrl": "https://kibuika.com",
+    "language": "en-US",
+    "social": {
+      "twitter": "the_kibuika"
+    }
+  }
+}
