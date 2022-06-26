@@ -4,169 +4,136 @@
         <title>Steve Kibuika || Javascript Blog</title>
         <link>https://kibuika.com</link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 26 Jun 2022 09:56:13 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Jun 2022 12:52:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Steve Kibuika</copyright>
         <item>
-            <title><![CDATA[Long Post]]></title>
-            <link>https://kibuika.composts/long-post</link>
-            <guid>long-post</guid>
-            <pubDate>Tue, 28 Jul 2020 21:00:00 GMT</pubDate>
-            <description><![CDATA[Who doesn't like a long post showcasing the different headings?]]></description>
+            <title><![CDATA[Primitives vs Objects (Value vs Reference)]]></title>
+            <link>https://kibuika.composts/value-vs-reference</link>
+            <guid>value-vs-reference</guid>
+            <pubDate>Sat, 25 Jun 2022 21:00:00 GMT</pubDate>
+            <description><![CDATA[A light look into values and references.]]></description>
             <content:encoded><![CDATA[
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+I'll kick this off with some examples that will act as the base of this article.
 
-## On deer horse aboard tritely yikes and much
+```js
+const a = 1
+const b = 2
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+a === b // false
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+const c = 1
+const d = 1
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+c === d // true
 
-### Overlaid the jeepers uselessly much excluding
+const e = [1]
+const f = [1]
+const g = f
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
-
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
-
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
-
-### According a funnily until pre-set or arrogant well cheerful
-
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
-
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
-
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
-
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
-
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
-
-#### Silent delightfully including because before one up barring chameleon
-
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
-
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-#### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
-
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
-
-#### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Coding Post]]></title>
-            <link>https://kibuika.composts/coding-post</link>
-            <guid>coding-post</guid>
-            <pubDate>Sat, 18 Apr 2020 21:00:00 GMT</pubDate>
-            <description><![CDATA[Coding is such a blissful activity.]]></description>
-            <content:encoded><![CDATA[
-```jsx
-import React from "react";
-
-const CoolComponent = () => <div>I'm a cool component!!</div>;
-
-export default CoolComponent;
+e === f // false
+e === [1] // false
+g === f // true
 ```
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Second post]]></title>
-            <link>https://kibuika.composts/second-post</link>
-            <guid>second-post</guid>
-            <pubDate>Thu, 16 Apr 2020 21:00:00 GMT</pubDate>
-            <description><![CDATA[The second post is the least memorable.]]></description>
-            <content:encoded><![CDATA[
-# h1
 
-## h2
+The comparison of a and b makes sense, right? But for the comparison of e and f, e and [1], g and f, that is where things get interesting. Someone who doesn't know what is actually happening will just say Javascript is weird, but it really isn't.
 
-### h3
+Javascript provides us with two types of datatypes: Primitives and Objects. Each of this datatype is passed differently to a variable. Primitives are passed by value while Objects are passed by reference.
 
-Normal text
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[First post]]></title>
-            <link>https://kibuika.composts/first-post</link>
-            <guid>first-post</guid>
-            <pubDate>Wed, 15 Apr 2020 21:00:00 GMT</pubDate>
-            <description><![CDATA[The first post is the most memorable one.]]></description>
-            <content:encoded><![CDATA[
-# h1
+## Primitives
+Primitives are numbers, booleans, strings, symbols and special values like undefined and null
 
-## h2
+```js
+const number = 2;
+const boolean = true;
+const string = 'Hello World!';
+const missingItem = null;
+const nothing = undefined;
+```
 
-### h3
+Like I said, primitive values are passed by value. This means that every time you assign a primitive value to a variable, a copy of that value is created. 
 
-Normal text
+```js
+let a = 10; 
+let b = a;
 
-![Cat](cat.jpg)
+// mutate b
+b = b + 10;
+
+console.log(b) // 20
+console.log(a) // 10
+```
+
+The very first statement declares a variable ```a``` and initializes it with the number ```1```. The second statement ```let b = a```, declares another variable ```b``` and initializes it with the value of the variable ```a```. Since we are dealing with primitives here, a copy of the number ```1``` is assigned to ```b```.
+
+When we change the the value of ```b```, ```b = b + 10```, we are basically increasing the value of ```b``` by ```10```. Notice the value of ```b``` increases to ```20``` while the value of ```a``` remains the same.
+
+## Objects
+Objects are the other category od fata types that Javascript provides us. Objects include: the plain object, arrays, functions, dates, regex, etc. Anything that is not a primitive is an object in js.
+
+```js
+const person = {
+    name: "Steve"
+}
+
+const array = [2, 3, 4, 5]
+
+const functionObj = (a1, a2) => {
+    return a1 + a2;
+}
+```
+
+Unlike primitive values where the value assigned to a variable is the actual copy of that value, objects are assigned by reference. This means that when you declare a variable ```person``` and assign it an object, that object is created in memory and the address of that memory location is assigned to the variable ```person```.
+
+Let's break this down.
+```js 
+const person = {
+    name: "Steve"
+}
+```
+The object ```{name: "Steve"}``` is created in memory and the location of that memory is, let's say ```1234567```, this is the address that points to that location in memory. Ideally this ```address``` is what is "assigned" to the variable ```person```.
+So instead of ```person``` holding an actual copy of the onject, it just points to a location in memory where the object has been created.
+
+```person =============> 1234567```
+```js
+ // address 1234567
+ {
+    name: "Steve"
+ }
+ ```
+
+ What happens when we assign a new variable the value of an existing object?
+
+ ```js
+ let person = {
+    name: "Steve"
+ }
+
+ let newPerson = person;
+
+ newPerson.age = 24;
+
+ console.log(person) // {name: "Steve", age: 24}
+ console.log(newPerson) // {name: "Steve", age: 24}
+
+ ```
+
+ What tha heck!!. Yes. Remember when we said that ```Objects```(the data type) points to memory locations? This is what is happening. Our object ```{name: "Steve"}``` is created in memory and its address is "assigned" to the variable person. When we declare a new variable ```newPerson``` and assign it the value of ```person```, what we are doing is assigning a reference to the memory location. Basically, both ```person``` and ```newPerson``` are pointing to the same memory location.
+
+ ```person ============> 1234567```
+ ```newPerson ===========> 1234567```
+
+ That is why when we add a new property ```age``` with a value of ```24``` to ```newPerson```, this also applies to ```person``` because it is pointing to the same memory location.
+
+ And this is what ```pass by reference``` is all about. We are passing references and not actual values.
+
+
+ ### Highlights
+ - Javascript is not weird
+ - Pass by value means an actual copy of that value is assigned to the variable. This happens with ```Primitives``` data types (numbers, strings, boolean, null, undefined)
+ - Pass by reference means that the value is created in memory and an address to that memory location is what the variable will "hold". This happens with ```Objects``` data types (object, array, function, date, regex)
 ]]></content:encoded>
         </item>
     </channel>
