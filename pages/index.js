@@ -7,7 +7,7 @@ import { generateRssPostsFeed } from "@utils/rss";
 export default function Home({ posts }) {
   return (
     <Layout>
-      <SEO title="All posts" />
+      <SEO title="Steve Kibuika || Javascript Blog" />
       <Bio className="my-14" />
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article key={slug}>
