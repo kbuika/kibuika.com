@@ -6,3 +6,7 @@ span,
 p {
   @apply font-light;
 }
+
+.text-subtle-red {
+  @apply text-subtle-red;
+}

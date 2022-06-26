@@ -17,9 +17,9 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
 
       <article>
         <header className="mb-8">
-          <h1 className="mb-2 text-2xl font-black leading-none font-display">
+          <a className="mb-2 text-2xl font-black leading-none font-display text-subtle-red">
             {frontmatter.title}
-          </h1>
+          </a>
           <p className="text-sm">{frontmatter.date}</p>
         </header>
         <ReactMarkdown

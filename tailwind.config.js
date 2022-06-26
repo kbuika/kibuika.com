@@ -33,6 +33,8 @@ module.exports = {
     extend: {
       colors: {
         "neon-orange": "#f92300",
+        "neon-red": "#FF4949",
+        "subtle-red": "#EB5353"
       },
       fontSize: {
         "7xl": "4.5rem",
