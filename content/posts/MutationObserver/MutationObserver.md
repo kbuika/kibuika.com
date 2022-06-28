@@ -4,7 +4,7 @@ description: What it is, how it saved me from losing my mind, why you should car
 date: 2022-06-28T11:00:00.000Z
 ---
 
-Over the weekend, I was working on some "fun" build. One of my favourite youtube channels ```The Good Company KE``` where I get my music mixes, does not name their videos properly. So if I am in the mood for some good pop-mix, I have to click around and fast-forward till I get the right video. Very exhausting. So I thought I could fix this using a chrome extension.
+Over the weekend, I was working on some "fun" build. One of my favourite youtube channels `The Good Company KE` where I get my music mixes, does not name their videos properly. So if I am in the mood for some good pop-mix, I have to click around and fast-forward till I get the right video. Very exhausting. So I thought I could fix this using a chrome extension.
 
 The extension's logic (simple version)  
 ```open youtube``` ===> ```check if it is a Grauchi Mix``` ===> ```get my comment from the video comments``` ===> ```replace this comment with the title```
@@ -21,7 +21,6 @@ Ideally, if we have the right the reference to the title element, we should get 
 But then I got a ```null``` when I logged to the console.  
 Lets test in the console  
 
-![qs](../../assets/qs.png)  
 
 It works!!!  
 

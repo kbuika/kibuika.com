@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-blog-starter",
+  "name": "kibuika-blog",
   "version": "0.3.0",
-  "description": "A Next.js template for a blog website.",
+  "description": "A tech blog for Steve Kibuika.",
   "private": true,
   "engines": {
     "node": "14"
