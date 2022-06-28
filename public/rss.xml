@@ -4,11 +4,49 @@
         <title>Steve Kibuika || Javascript Blog</title>
         <link>https://kibuika.com</link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 28 Jun 2022 14:08:41 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jun 2022 14:52:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Steve Kibuika</copyright>
+        <item>
+            <title><![CDATA[Where are my Arrays and Strings ".at"?]]></title>
+            <link>https://kibuika.composts/At-Prototype</link>
+            <guid>At-Prototype</guid>
+            <pubDate>Mon, 27 Jun 2022 21:00:00 GMT</pubDate>
+            <description><![CDATA[The EcmaScript release on June 2022 (ES2022) introduced a new method (.at), it is okay-ish.]]></description>
+            <content:encoded><![CDATA[
+The new method ```.at()``` of indexable values allows us to read an element at a given index. Basically like the bracket ```[]``` operator. The pro is that it supports negative indices, which the bracket operator does not.
+
+### Let's see
+
+```js
+// array of names
+let names = ["John", "Jacob", "Jingleheimer", "Schmidt"];
+console.log(names[0]) // "John"   ====>>> using the bracket operator
+console.log(names.at(0)); // "John"  ====>> using the new .at() method
+```
+
+This is also the case with Strings  
+
+```js
+let person = "Steve";
+console.log(person[0]) // 'S'
+console.log(person.at(0)) // 'S'
+```
+
+But when it comes to using negative values, this is where ```.at()``` gets the bracket ```[]``` operator at.
+
+```js
+let person = "Steve";
+console.log(person[-1]); // undefined
+console.log(person.at(-1)); // 'e'
+```
+
+This is a useful feature though I have not gotten a proper use-case for it, but I am sure I will use it in the future. But besides ```.at()``` There are alot of cool features that were released with ES2022, including ```error.cause```, ```Top-level await in modules```, ```Object.hasOwn(obj, propKey)``` and others. Have a look at everything [ES2022](https://262.ecma-international.org/)
+
+Cheers :)]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[How MutationObserver saved my weekend build]]></title>
             <link>https://kibuika.composts/MutationObserver</link>
@@ -33,6 +71,7 @@ Ideally, if we have the right the reference to the title element, we should get 
 But then I got a ```null``` when I logged to the console.  
 Lets test in the console  
 
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
 
 It works!!!  
 

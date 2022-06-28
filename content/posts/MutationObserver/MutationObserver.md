@@ -21,6 +21,7 @@ Ideally, if we have the right the reference to the title element, we should get 
 But then I got a ```null``` when I logged to the console.  
 Lets test in the console  
 
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
 
 It works!!!  
 
