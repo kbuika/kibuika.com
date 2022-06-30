@@ -4,15 +4,15 @@
         <title>Steve Kibuika || Javascript Blog</title>
         <link>https://kibuika.com</link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 30 Jun 2022 06:21:25 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Jun 2022 18:58:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Steve Kibuika</copyright>
         <item>
             <title><![CDATA[Where are my Arrays and Strings ".at"?]]></title>
-            <link>https://kibuika.composts/at-prototype</link>
-            <guid>at-prototype</guid>
+            <link>https://kibuika.composts/At-Prototype</link>
+            <guid>At-Prototype</guid>
             <pubDate>Mon, 27 Jun 2022 21:00:00 GMT</pubDate>
             <description><![CDATA[The EcmaScript release on June 2022 (ES2022) introduced a new method (.at), it is okay-ish.]]></description>
             <content:encoded><![CDATA[
@@ -49,8 +49,8 @@ Cheers :)]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[MutationObserver saved my weekend build]]></title>
-            <link>https://kibuika.composts/MutationObserver</link>
-            <guid>MutationObserver</guid>
+            <link>https://kibuika.composts/Mutation-Observer</link>
+            <guid>Mutation-Observer</guid>
             <pubDate>Mon, 27 Jun 2022 21:00:00 GMT</pubDate>
             <description><![CDATA[What it is, how it saved me from losing my mind, why you should care.]]></description>
             <content:encoded><![CDATA[
@@ -151,8 +151,8 @@ Cheers :)
         </item>
         <item>
             <title><![CDATA[Primitives vs Objects (Value vs Reference)]]></title>
-            <link>https://kibuika.composts/value-vs-reference</link>
-            <guid>value-vs-reference</guid>
+            <link>https://kibuika.composts/Value-vs-Reference</link>
+            <guid>Value-vs-Reference</guid>
             <pubDate>Sat, 25 Jun 2022 21:00:00 GMT</pubDate>
             <description><![CDATA[A light look into values and references.]]></description>
             <content:encoded><![CDATA[
