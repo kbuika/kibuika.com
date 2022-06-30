@@ -17,16 +17,16 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
 
       <article>
         <header className="mb-8">
-          <a className="mb-2 text-2xl font-black leading-none font-display text-subtle-red">
+          <a className="mb-2 text-sm font-bold text-yellow-600 font-display">
             {frontmatter.title}
           </a>
           <p className="text-sm">{frontmatter.date}</p>
         </header>
         <ReactMarkdown
-          className="mb-4 prose lg:prose-lg dark:prose-dark"
+          className="mb-4 prose lg:prose-lg dark:prose-dark markdown"
           escapeHtml={false}
           source={post.content}
-          renderers={{ code: CodeBlock, image: MarkdownImage }}
+          renderers={{ code: CodeBlock, image: MarkdownImage, title: "h3" }}
         />
         <hr className="mt-4" />
         <footer>

@@ -1,5 +1,5 @@
 ---
-title: How MutationObserver saved my weekend build 
+title: MutationObserver saved my weekend build 
 description: What it is, how it saved me from losing my mind, why you should care.
 date: 2022-06-28T11:00:00.000Z
 ---
