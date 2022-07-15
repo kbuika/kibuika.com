@@ -4,11 +4,22 @@
         <title>Steve Kibuika || Javascript Blog</title>
         <link>https://kibuika.com</link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 30 Jun 2022 18:58:24 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Jul 2022 10:12:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Steve Kibuika</copyright>
+        <item>
+            <title><![CDATA[Closures]]></title>
+            <link>https://kibuika.composts/Closures</link>
+            <guid>Closures</guid>
+            <pubDate>Wed, 06 Jul 2022 21:00:00 GMT</pubDate>
+            <description><![CDATA[If our function was tea and the surrounding environment was a cup - then the entire "cup of tea" is a Closure. The difference is that Closures are not every developer's "cup of tea".]]></description>
+            <content:encoded><![CDATA[
+Two months ago, I was interviewing for a Javascript role at this very good, New York and Sweden based company. They gave me a NextJs task that I did very well and then started the next steps. Everything was going really well. During the last interview, I was talking with a Frontend Lead and hes started asking me Javascript concepts. "Could you explain to me closures?". I Froze. I still have PTSD from that experience and so I had to really learn closures.
+
+According to [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), a closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). They allow us to access an outer function's scope from within an inner function.]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Where are my Arrays and Strings ".at"?]]></title>
             <link>https://kibuika.composts/At-Prototype</link>
