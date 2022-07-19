@@ -30,7 +30,7 @@ let emma = new Baby("Emma")
 emma.cry()   // Ing'aaaaaa, I am Emma
 emma.smileAndEat()  // I love food, my name is
 ```
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/emma.png?raw=true" alt="title text">
 
 Notice when we call ``emma.cry()``, the value of ``this.name`` is ``Emma`` but when we call ``emma.smileAndEat()``, the value of ``this.name`` is ``undefined``. This is because the ``setTimeout()`` function creates its own scope that does not have the value of name.
 
@@ -52,7 +52,7 @@ How can this be resolved?? - By binding the ``setTimeout()`` function to ``this`
 When we rewrite our ``Baby`` class with the ``smileAndEat()`` method looking like this, as in boud by with ``this``, it works!. The rhyming is unintentional btw :)
 It works because once the ``setTimeout()`` creates its own scope and tries to access the value of ``this.name``, it will not find a value but it will have a scope to fall back to (the class scope) where it will find the value of name.
 
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/kyle.png?raw=true" alt="title text">
 
 We'll see this in the console
 
@@ -89,7 +89,7 @@ So when we rewrite our ``smileAndEat()`` method like this:
     .
 ```
 
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/ken.png?raw=true" alt="title text">
 
 
 
