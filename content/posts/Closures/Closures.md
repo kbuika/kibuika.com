@@ -66,7 +66,7 @@ You would think the functions ``isCrying()`` and ``isCute()`` would throw an err
 
     Yes, React's [useState](https://reactjs.org/docs/hooks-state.html) makes use of closures in order to keep track of references to the previous state. This way it is able to compare the new value and the previous value and decides whether to update the value in state. I will talk more about this in a later post.
 
-2. Array Prototypes
+2. Arrow Functions
     Imagine you are trying to filter an array given a condition.
     ```js
     const studentName = "Steve"
@@ -81,7 +81,7 @@ You would think the functions ``isCrying()`` and ``isCute()`` would throw an err
 
     ```
 
-    From this example, we see the ``Array.filter()`` method uses the variable ``studentName`` that is in the global scope. This makes it a closure.
+    From this example, we see the arrow function in``Array.filter()`` method uses the variable ``studentName`` that is in the global scope. This makes it a closure. I will explore more of Arrow Functions at a later post and we'll see the advantages.
 
 
 There is alot more to Closures than I could give in this post, but closures are really powerful and you should definitely give them a spin. Thats it for now!
