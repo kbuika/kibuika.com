@@ -6,9 +6,9 @@ date: 2022-07-12T11:00:00.000Z
 
 In my previous Closures post, I initially added ``Array prototypes`` as an example of closures and to support that, I used the example of ``Array.filter()`` that uses a filter condition declared in the global scope in order to filter. Look and feels right, but boy ooh boy, or girl ooh girl or non-binary ooh non-binary was I wrong-``ish``.
 
-Technically, it is not the Array prototypes that are closures, it is the arrow functions that they take as arguments that are arguments. Okay, look at this.
+Technically, it is not the Array prototypes that are closures, it is the arrow functions that they take as arguments that are closures. Okay, look at this.
 
-Let's create a that cries, smiles while eating and says its name everytime
+Let's create a baby that cries, smiles while eating and says its name everytime
 
 ```js
 class Baby{
@@ -49,7 +49,9 @@ How can this be resolved?? - By binding the ``setTimeout()`` function to ``this`
 
 ```
 
-When we rewrite our ``Baby`` class with the ``smileAndEat()`` method looking like this, as in boud by with ``this``, it works!. The rhyming is unintentional btw :)
+When we rewrite our ``Baby`` class with the ``smileAndEat()`` method looking like this, as in boud by with ``this``, it works!
+
+The rhyming is unintentional btw :)
 It works because once the ``setTimeout()`` creates its own scope and tries to access the value of ``this.name``, it will not find a value but it will have a scope to fall back to (the class scope) where it will find the value of name.
 
 <img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/kyle.png?raw=true" alt="title text">
@@ -95,7 +97,7 @@ So when we rewrite our ``smileAndEat()`` method like this:
 
 It works!! 
 
-Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the previous scope (class scope) where it finds the value of ``this.name``. And all this works without binding, it is the magic of closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
+Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the previous scope (class scope) where it finds the value of ``this.name``. And all this works without binding, this is the magic of Closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
 
 
 I think I have closure now, because I really need to move on and so should you.
