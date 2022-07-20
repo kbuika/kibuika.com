@@ -11,7 +11,7 @@ Technically, it is not the Array prototypes that are closures, it is the arrow f
 Let's create a that cries, smiles while eating and says its name everytime
 
 ```js
-class Baby(){
+class Baby{
     constructor(name){
         this.name = name
     }
