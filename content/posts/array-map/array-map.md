@@ -71,7 +71,7 @@ const map = (arr, fn) => {
 
 And that's pretty much it, yes, imagine, that is it. Lets throw this in the console and test
 
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/emma.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/array.png?raw=true" alt="title text">
 
 It works!! ***silent amen***, time for twitter now. :)
 
