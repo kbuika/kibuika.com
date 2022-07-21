@@ -97,7 +97,7 @@ So when we rewrite our ``smileAndEat()`` method like this:
 
 It works!! 
 
-Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the previous scope (class scope) where it finds the value of ``this.name``. And all this works without binding, this is the magic of Closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
+Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the enclosing scope (class scope) where it finds the value of ``this.name``. And all this works without binding, this is the magic of Closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
 
 
 I think I have closure now, because I really need to move on and so should you.

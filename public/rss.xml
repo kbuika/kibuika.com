@@ -4,13 +4,26 @@
         <title>Steve Kibuika || Javascript Blog</title>
         <link>https://kibuika.com</link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 19 Jul 2022 14:56:25 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Jul 2022 12:02:22 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en-US</language>
         <copyright>Copyright © 2022 Steve Kibuika</copyright>
         <item>
-            <title><![CDATA[Closures...I am not done]]></title>
+            <title><![CDATA[Under the hood:: Array.map()]]></title>
+            <link>https://kibuika.composts/array-map</link>
+            <guid>array-map</guid>
+            <pubDate>Sat, 16 Jul 2022 21:00:00 GMT</pubDate>
+            <description><![CDATA[I have a soft spot for Array prototypes in Javascript, I use them alot, but how do they really work under the hood? Lets explore the Array.map().]]></description>
+            <content:encoded><![CDATA[
+As a dev, it is normal to get lost in abstractions. The moment something works, we just say a silent "Amen" then rush to twitter. We all do this, right? :)
+
+But behind all this abstractions, something else is happening, and someone wrote that, it is not magic, it is also just Javascript. So I am starting a sequel ``Under the hood::`` that is my attempt at uncovering the inner abstracted workings of some of my favourite and common Javascript techniques.
+
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Closures...I am not done yet]]></title>
             <link>https://kibuika.composts/Closures-again</link>
             <guid>Closures-again</guid>
             <pubDate>Mon, 11 Jul 2022 21:00:00 GMT</pubDate>
@@ -18,12 +31,12 @@
             <content:encoded><![CDATA[
 In my previous Closures post, I initially added ``Array prototypes`` as an example of closures and to support that, I used the example of ``Array.filter()`` that uses a filter condition declared in the global scope in order to filter. Look and feels right, but boy ooh boy, or girl ooh girl or non-binary ooh non-binary was I wrong-``ish``.
 
-Technically, it is not the Array prototypes that are closures, it is the arrow functions that they take as arguments that are arguments. Okay, look at this.
+Technically, it is not the Array prototypes that are closures, it is the arrow functions that they take as arguments that are closures. Okay, look at this.
 
-Let's create a that cries, smiles while eating and says its name everytime
+Let's create a baby that cries, smiles while eating and says its name everytime
 
 ```js
-class Baby(){
+class Baby{
     constructor(name){
         this.name = name
     }
@@ -42,7 +55,7 @@ let emma = new Baby("Emma")
 emma.cry()   // Ing'aaaaaa, I am Emma
 emma.smileAndEat()  // I love food, my name is
 ```
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/emma.png?raw=true" alt="title text">
 
 Notice when we call ``emma.cry()``, the value of ``this.name`` is ``Emma`` but when we call ``emma.smileAndEat()``, the value of ``this.name`` is ``undefined``. This is because the ``setTimeout()`` function creates its own scope that does not have the value of name.
 
@@ -61,10 +74,12 @@ How can this be resolved?? - By binding the ``setTimeout()`` function to ``this`
 
 ```
 
-When we rewrite our ``Baby`` class with the ``smileAndEat()`` method looking like this, as in boud by with ``this``, it works!. The rhyming is unintentional btw :)
+When we rewrite our ``Baby`` class with the ``smileAndEat()`` method looking like this, as in boud by with ``this``, it works!
+
+The rhyming is unintentional btw :)
 It works because once the ``setTimeout()`` creates its own scope and tries to access the value of ``this.name``, it will not find a value but it will have a scope to fall back to (the class scope) where it will find the value of name.
 
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/kyle.png?raw=true" alt="title text">
 
 We'll see this in the console
 
@@ -101,13 +116,13 @@ So when we rewrite our ``smileAndEat()`` method like this:
     .
 ```
 
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/qs.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/ken.png?raw=true" alt="title text">
 
 
 
 It works!! 
 
-Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the previous scope (class scope) where it finds the value of ``this.name``. And all this works without binding, it is the magic of closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
+Essentially, we have rewritten the function argument for ``setTimeout()`` as an arrow function. This is because the arrow function does not have its own ``this`` defined and unlike the traditional function expression, it falls back to the enclosing scope (class scope) where it finds the value of ``this.name``. And all this works without binding, this is the magic of Closures. Our arrow function is bound with it's lexical environment so it is able to fall back to the previous scope.
 
 
 I think I have closure now, because I really need to move on and so should you.
