@@ -5,7 +5,7 @@ date: 2022-07-26T11:00:00.000Z
 ---
 
 Last week, I tweeted this
-<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/kyle.png?raw=true" alt="title text">
+<img src="https://github.com/kibuikaCodes/kibuika.com/blob/main/content/assets/wtf.png?raw=true" alt="title text">
 
 When you run this on the console, it logs ``Friday!!!``. Yes it does. It blew my mind and so did everyone's in the comments.
 
