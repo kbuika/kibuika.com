@@ -1,6 +1,6 @@
 ---
 title: Closures...I am not done yet
-description: My quest for closures keeps intensifying. Maybe it has nothing to do with Javascript closures but some other kind of closure. Anyway, let's explore array functions as closures.
+description: My quest for closures keeps intensifying. Maybe it has nothing to do with Javascript closures but some other kind of closure.
 date: 2022-07-12T11:00:00.000Z
 ---
 

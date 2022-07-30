@@ -9,6 +9,7 @@ export default function Home({ posts }) {
     <Layout>
       <SEO title="Steve Kibuika || Javascript Blog" />
       <Bio className="my-14" />
+      <p className="mt-16 mb-8 text-2xl font-bold">Latest Posts..</p>
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article key={slug}>
           <header className="mb-2">

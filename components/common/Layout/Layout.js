@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 export function Layout({ children }) {
   return (
     <div className="w-full min-h-screen dark:bg-gray-700 dark:text-white">
-      <div className="max-w-screen-md px-4 py-12 mx-auto antialiased font-body">
+      <div className="max-w-screen-lg px-4 py-12 mx-auto antialiased font-body">
         <Header />
         <main>{children}</main>
         <footer className="text-lg font-light">
@@ -47,8 +47,10 @@ const Header = () => {
       <div className={"max-w-md"}>
         {isRoot ? <LargeTitle /> : <SmallTitle />}
       </div>
+      
       {mounted && (
         <div className="flex space-x-4">
+          <p>Link</p>
           <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} />
         </div>
       )}
