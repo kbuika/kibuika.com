@@ -10,4 +10,13 @@ module.exports = {
   experimental: { 
     nftTracing: true 
   },
+  async redirects() {
+    return [
+      {
+        source: "/twitter",
+        destination: "https://twitter.com/the_kibuika",
+        permanent: true,
+      },
+    ];
+  }
 };
