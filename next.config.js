@@ -17,6 +17,11 @@ module.exports = {
         destination: "https://twitter.com/the_kibuika",
         permanent: true,
       },
+      {
+        source: "/git",
+        destination: "https://github.com/kibuikaCodes",
+        permanent: true,
+      }
     ];
   }
 };
