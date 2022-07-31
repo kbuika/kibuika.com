@@ -21,6 +21,16 @@ module.exports = {
         source: "/git",
         destination: "https://github.com/kibuikaCodes",
         permanent: true,
+      },
+      {
+        source: "/ext-ppt",
+        destination: "https://speakerdeck.com/kibuika/getting-started-with-chrome-extensions",
+        permanent: true,
+      },
+      {
+        source: "/grauchi-ext",
+        destination: "https://github.com/kibuikaCodes/grauchi-chrome-extension",
+        permanent: true,
       }
     ];
   }
