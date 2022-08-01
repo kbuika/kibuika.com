@@ -50,7 +50,7 @@ const Header = () => {
       
       {mounted && (
         <div className="flex space-x-4">
-          <p>Link</p>
+          <a href="https://speakerdeck.com/kibuika" target="_blank" rel="noreferrer">Speaker Deck</a>
           <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} />
         </div>
       )}
