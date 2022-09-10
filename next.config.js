@@ -31,6 +31,21 @@ module.exports = {
         source: "/grauchi-ext",
         destination: "https://github.com/kibuikaCodes/grauchi-chrome-extension",
         permanent: true,
+      },
+      {
+        source: "/not-react",
+        destination: "https://github.com/kibuikaCodes/looks-like-React-quacks-like-React-but-its-not-React",
+        permanent: true,
+      },
+      {
+        source: "/not-react-slides",
+        destination: "https://speakerdeck.com/kibuika/the-closure-s-you-need",
+        permanent: true,
+      },
+      {
+        source: "/pod",
+        destination: "https://spotifyanchor-web.app.link/e/s366JsJqbtb",
+        permanent: true,
       }
     ];
   }
