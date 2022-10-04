@@ -15,7 +15,8 @@ export function Bio({ className }) {
         <br />
         I like to build great experiences for the web and experimenting with esoteric features of Javascript.
         <br />
-        Currently, I am a Fullstack Developer at <a href="https://granularit.com/">Granular IT</a> by day and by night, I am experimenting with TypeScript and Go.
+        Recently, I have been telling dad jokes and speaking to interesting people at <a href="https://anchor.fm/concurrency-podcast" target="_blank" rel="noopener noreferrer">The Concurrency Podcast</a>. 
+        I am a Fullstack Developer at <a href="https://granularit.com/" target="_blank" rel="noopener noreferrer">Granular IT</a> by day and by night, I am experimenting with TypeScript and Go.
         <br />
         <br />
         I am cool on{" "}
