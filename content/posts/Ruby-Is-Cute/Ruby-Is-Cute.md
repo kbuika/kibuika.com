@@ -1,5 +1,5 @@
 ---
-title: "Ruby": If love was a programming language
+title: Ruby; If love was a programming language
 description: Ruby is just one of those languages that is just so easy to love.
 date: 2023-01-27T11:00:00.000Z
 ---
