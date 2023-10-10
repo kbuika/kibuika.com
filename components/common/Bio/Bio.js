@@ -11,12 +11,12 @@ export function Bio({ className }) {
   return (
     <div className={clsx("flex flex-wrap items-center space-x-3 justify-between lg:mt-24 lg:flex-nowrap", className)}>
       <p className="text-base leading-7 lg:text-lg">
-        Hello there, I am <strong>Steve Kibuika</strong>, to say I love Javascript would be an understatement.
+        Hello there, I am <strong>Steve Kibuika</strong>, I have been writing a lot of TypeScript and Javascript recently.
         <br />
-        I like to build great experiences for the web and experimenting with esoteric features of Javascript.
+        I am still wrapping my head around Next.js App Router.
         <br />
         Recently, I have been telling dad jokes and speaking to interesting people at <a href="https://anchor.fm/concurrency-podcast" target="_blank" rel="noopener noreferrer">The Concurrency Podcast</a>. 
-        I am a Fullstack Developer at <a href="https://granularit.com/" target="_blank" rel="noopener noreferrer">Granular IT</a> by day and by night, I am experimenting with TypeScript and Ruby.
+        I write code and run operations at an events agency - <a href="https://tikomatata.com/" target="_blank" rel="noopener noreferrer">Tikomatata</a>, I am experimenting with Go and Ruby.
         <br />
         <br />
         I am cool on{" "}
