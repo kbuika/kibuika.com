@@ -49,4 +49,4 @@ After trying to test out all scenarios and trying to post-mortem the issue, I fo
 
 So my teammate and i went on a feature architecture "hunt" that involved trying to restructure the tickets to be handled in the backend. Sadly, the backend is built in Java and Java doesn't seem to have proper libraries that can handle html content.
 
-That's when I landed on `node-html-to-image` -- and this came with another headache that I've written about here
+That's when I landed on `node-html-to-image` -- and this came with another headache that I've written about [here](https://kibuika.com/posts/using-node-html-to-image)
