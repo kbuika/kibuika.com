@@ -4,7 +4,7 @@
   "description": "A tech blog for Steve Kibuika.",
   "private": true,
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "scripts": {
     "dev": "next dev",
